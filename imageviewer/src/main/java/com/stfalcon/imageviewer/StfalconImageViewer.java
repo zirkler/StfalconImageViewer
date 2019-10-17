@@ -238,6 +238,16 @@ public class StfalconImageViewer<T> {
         }
 
         /**
+         * Sets status bar visibility. True by default.
+         *
+         * @return This Builder object to allow calls chaining
+         */
+        public Builder<T> withHiddenToolbar(boolean value) {
+            this.data.setHiddenToolbar(value);
+            return this;
+        }
+
+        /**
          * Enables or disables zooming. True by default.
          *
          * @return This Builder object to allow calls chaining

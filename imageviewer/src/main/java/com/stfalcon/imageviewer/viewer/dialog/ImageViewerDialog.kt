@@ -34,7 +34,9 @@ internal class ImageViewerDialog<T>(
     private var animateOpen = true
 
     private val dialogStyle: Int
-        get() = if (builderData.shouldStatusBarHide)
+        get() = if (builderData.hiddenToolbar)
+            R.style.ImageViewerDialog_NoToolbar
+        else if (builderData.shouldStatusBarHide)
             R.style.ImageViewerDialog_NoStatusBar
         else
             R.style.ImageViewerDialog_Default
